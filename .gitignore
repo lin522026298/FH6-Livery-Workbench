@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+
+# Build and package output
+build/
+dist/
+release/
+*.spec.local
+*.zip
+
+# User/runtime data must never enter Git
+workspace/
+backups/
+logs/
+settings.local.json
+*.save-backup.zip
+
+# Upstream build trees
+third_party/ForzaLiveryStudio/build*/
+third_party/ForzaLiveryStudio/vcpkg/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vs/
+.vscode/

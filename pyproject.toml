@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "fh6-livery-workbench"
+dynamic = ["version"]
+description = "Headless authored-livery conversion, validation, backup and local import"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "AGPL-3.0-only" }
+[project.scripts]
+fh6-livery-workbench = "fh6_livery_workbench.cli:main"
+[tool.setuptools]
+package-dir = {"" = "src"}
+[tool.setuptools.dynamic]
+version = {attr = "fh6_livery_workbench.__version__"}
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.setuptools.package-data]
+fh6_livery_workbench = ["delete_backup_archives.ps1"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
